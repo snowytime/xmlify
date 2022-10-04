@@ -1,7 +1,15 @@
 {
     "name": "@snowytime/xmlify",
     "version": "1.0.0",
-    "description": "",
+    "homepage": "https://snowy.sh/packages/xmlify",
+    "bugs": {
+        "url": "https://github.com/snowytime/xmlify/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/snowytime/xmlify.git"
+    },
+    "description": "Super simple xml <-> json builder and parser for making multi language apis more fun to play with",
     "scripts": {
         "add_package_json": "sh package.sh",
         "clean": "rm -rf dist",
