@@ -2,6 +2,7 @@
     "name": "@snowytime/xmlify",
     "version": "1.0.1",
     "homepage": "https://snowy.sh/packages/xmlify",
+    "type": "module",
     "bugs": {
         "url": "https://github.com/snowytime/xmlify/issues"
     },
