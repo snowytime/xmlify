@@ -1,6 +1,6 @@
 {
     "name": "@snowytime/xmlify",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "homepage": "https://snowy.sh/packages/xmlify",
     "type": "module",
     "bugs": {
