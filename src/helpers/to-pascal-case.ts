@@ -10,7 +10,7 @@ export const toPascalCase = (str: string) => {
     str = str.charAt(0).toUpperCase() + str.slice(1);
     if (/(?:_)|(?:-)/.test(str)) {
         // we this word is most likely snake_case
-        return str.replace(/([-_][a-z])/g, (group) =>
+        str = str.replace(/([-_][a-z])/g, (group) =>
             group.toUpperCase().replace("-", "").replace("_", "")
         );
     }

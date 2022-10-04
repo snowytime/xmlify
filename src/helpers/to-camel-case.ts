@@ -8,11 +8,9 @@ export const toCamelCase = (str: string) => {
     if (typeof str !== "string") return str;
     if (/(?:_)|(?:-)/.test(str)) {
         // we this word is most likely snake_case
-        return str
-            .toLowerCase()
-            .replace(/([-_][a-z])/g, (group) =>
-                group.toUpperCase().replace("-", "").replace("_", "")
-            );
+        str = str.replace(/([-_][a-z])/g, (group) =>
+            group.toUpperCase().replace("-", "").replace("_", "")
+        );
     }
     return str
         .replace(/(?:^\w|[A-Z]|[_-]|\b\w)/g, (word, index) => {
