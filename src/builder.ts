@@ -1,6 +1,9 @@
+interface Object {
+    [key: string]: string;
+}
 interface Builder {
     tree: {
-        [key: string]: string;
+        [key: string]: string | Object;
     };
     mutator?: (property: string) => string;
 }
@@ -11,7 +14,9 @@ export const builder = ({ tree, mutator }: Builder) => {
         const key = entry[0];
         const content = entry[1];
         xml += `<${mutator ? mutator(key) : key}>${
-            typeof content === "object" ? builder(content) : content
+            typeof content === "object"
+                ? builder({ tree: content, mutator })
+                : content
         }</${mutator ? mutator(key) : key}>`;
     });
     return xml;
