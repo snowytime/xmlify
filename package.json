@@ -14,7 +14,7 @@
     "scripts": {
         "add_package_json": "sh package.sh",
         "clean": "rm -rf dist",
-        "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && npm run add_package_json",
+        "build": "tsc -p tsconfig.mjs.json && tsc -p tsconfig.cjs.json && npm run add_package_json",
         "release:patch": "npm run build && git add . && git commit -m 'auto patch' && git push origin master && npm version patch && npm publish && echo 'Successful Patch'",
         "release:minor": "npm run build && git add . && git commit -m 'auto minor' && git push origin master && npm version minor && npm publish && echo 'Successful Minor Release'",
         "release:major": "npm run build && git add . && git commit -m 'auto major' && git push origin master && npm version major && npm publish && echo 'Successful Major Release'"
