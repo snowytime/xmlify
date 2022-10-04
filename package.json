@@ -1,0 +1,33 @@
+{
+    "name": "@snowytime/xmlify",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "add_package_json": "sh package.sh",
+        "clean": "rm -rf dist",
+        "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && npm run add_package_json",
+        "release:patch": "npm run build && git add . && git commit -m 'auto patch' && git push origin master && npm version patch && npm publish && echo 'Successful Patch'",
+        "release:minor": "npm run build && git add . && git commit -m 'auto minor' && git push origin master && npm version minor && npm publish && echo 'Successful Minor Release'",
+        "release:major": "npm run build && git add . && git commit -m 'auto major' && git push origin master && npm version major && npm publish && echo 'Successful Major Release'"
+    },
+    "author": "snowytime",
+    "license": "ISC",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.39.0",
+        "@typescript-eslint/parser": "^5.39.0",
+        "eslint": "^8.24.0",
+        "prettier": "^2.7.1",
+        "typescript": "^4.8.4"
+    },
+    "files": [
+        "dist"
+    ],
+    "main": "dist/cjs/index.js",
+    "module": "dist/mjs/index.js",
+    "exports": {
+        ".": {
+            "import": "./dist/mjs/index.js",
+            "require": "./dist/cjs/index.js"
+        }
+    }
+}

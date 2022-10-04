@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "declaration": true,
+        "esModuleInterop": true,
+        "inlineSourceMap": false,
+        "listEmittedFiles": false,
+        "listFiles": false,
+        "moduleResolution": "node",
+        "noFallthroughCasesInSwitch": true,
+        "pretty": true,
+        "resolveJsonModule": true,
+        "rootDir": "src",
+        "skipLibCheck": true,
+        "strict": true,
+        "traceResolution": false,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "declarationMap": true,
+        "forceConsistentCasingInFileNames": true,
+        "jsx": "react",
+        "incremental": true,
+        "target": "esnext",
+        "module": "esnext",
+        "lib": ["esnext", "dom"],
+        "checkJs": true
+    },
+    "exclude": ["node_modules", "dist"],
+    "include": ["src"],
+    "ts-node": {
+        "esm": true
+    }
+}
