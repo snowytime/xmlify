@@ -20,5 +20,3 @@ export const toCamelCase = (str: string) => {
         })
         .replace(/\s+/g, "");
 };
-
-console.log(toCamelCase("kebab-case"));
